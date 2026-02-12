@@ -1,0 +1,1553 @@
+{
+  "name": "vscode-ribbon",
+  "displayName": "VS Code Ribbon",
+  "description": "A tab-enabled ribbon surface for VS Code with bindable slots.",
+  "version": "0.0.1",
+  "publisher": "npepin",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:vscodeRibbon.view",
+    "onCommand:vscodeRibbon.focus",
+    "onCommand:vscodeRibbon.toggleCustomizeMode",
+    "onCommand:vscodeRibbon.assignSlotFromPalette",
+    "onCommand:vscodeRibbon.assignSlotManual",
+    "onCommand:vscodeRibbon.clearSlot",
+    "onCommand:vscodeRibbon.exportLayout",
+    "onCommand:vscodeRibbon.importLayout",
+    "onCommand:vscodeRibbon.setWriteTargetUser",
+    "onCommand:vscodeRibbon.setWriteTargetWorkspace",
+    "onCommand:vscodeRibbon.copyKeybindingSnippet",
+    "onCommand:vscodeRibbon.slot001",
+    "onCommand:vscodeRibbon.slot002",
+    "onCommand:vscodeRibbon.slot003",
+    "onCommand:vscodeRibbon.slot004",
+    "onCommand:vscodeRibbon.slot005",
+    "onCommand:vscodeRibbon.slot006",
+    "onCommand:vscodeRibbon.slot007",
+    "onCommand:vscodeRibbon.slot008",
+    "onCommand:vscodeRibbon.slot009",
+    "onCommand:vscodeRibbon.slot010",
+    "onCommand:vscodeRibbon.slot011",
+    "onCommand:vscodeRibbon.slot012",
+    "onCommand:vscodeRibbon.slot013",
+    "onCommand:vscodeRibbon.slot014",
+    "onCommand:vscodeRibbon.slot015",
+    "onCommand:vscodeRibbon.slot016",
+    "onCommand:vscodeRibbon.slot017",
+    "onCommand:vscodeRibbon.slot018",
+    "onCommand:vscodeRibbon.slot019",
+    "onCommand:vscodeRibbon.slot020",
+    "onCommand:vscodeRibbon.slot021",
+    "onCommand:vscodeRibbon.slot022",
+    "onCommand:vscodeRibbon.slot023",
+    "onCommand:vscodeRibbon.slot024",
+    "onCommand:vscodeRibbon.slot025",
+    "onCommand:vscodeRibbon.slot026",
+    "onCommand:vscodeRibbon.slot027",
+    "onCommand:vscodeRibbon.slot028",
+    "onCommand:vscodeRibbon.slot029",
+    "onCommand:vscodeRibbon.slot030",
+    "onCommand:vscodeRibbon.slot031",
+    "onCommand:vscodeRibbon.slot032",
+    "onCommand:vscodeRibbon.slot033",
+    "onCommand:vscodeRibbon.slot034",
+    "onCommand:vscodeRibbon.slot035",
+    "onCommand:vscodeRibbon.slot036",
+    "onCommand:vscodeRibbon.slot037",
+    "onCommand:vscodeRibbon.slot038",
+    "onCommand:vscodeRibbon.slot039",
+    "onCommand:vscodeRibbon.slot040",
+    "onCommand:vscodeRibbon.slot041",
+    "onCommand:vscodeRibbon.slot042",
+    "onCommand:vscodeRibbon.slot043",
+    "onCommand:vscodeRibbon.slot044",
+    "onCommand:vscodeRibbon.slot045",
+    "onCommand:vscodeRibbon.slot046",
+    "onCommand:vscodeRibbon.slot047",
+    "onCommand:vscodeRibbon.slot048",
+    "onCommand:vscodeRibbon.slot049",
+    "onCommand:vscodeRibbon.slot050",
+    "onCommand:vscodeRibbon.slot051",
+    "onCommand:vscodeRibbon.slot052",
+    "onCommand:vscodeRibbon.slot053",
+    "onCommand:vscodeRibbon.slot054",
+    "onCommand:vscodeRibbon.slot055",
+    "onCommand:vscodeRibbon.slot056",
+    "onCommand:vscodeRibbon.slot057",
+    "onCommand:vscodeRibbon.slot058",
+    "onCommand:vscodeRibbon.slot059",
+    "onCommand:vscodeRibbon.slot060",
+    "onCommand:vscodeRibbon.slot061",
+    "onCommand:vscodeRibbon.slot062",
+    "onCommand:vscodeRibbon.slot063",
+    "onCommand:vscodeRibbon.slot064",
+    "onCommand:vscodeRibbon.slot065",
+    "onCommand:vscodeRibbon.slot066",
+    "onCommand:vscodeRibbon.slot067",
+    "onCommand:vscodeRibbon.slot068",
+    "onCommand:vscodeRibbon.slot069",
+    "onCommand:vscodeRibbon.slot070",
+    "onCommand:vscodeRibbon.slot071",
+    "onCommand:vscodeRibbon.slot072",
+    "onCommand:vscodeRibbon.slot073",
+    "onCommand:vscodeRibbon.slot074",
+    "onCommand:vscodeRibbon.slot075",
+    "onCommand:vscodeRibbon.slot076",
+    "onCommand:vscodeRibbon.slot077",
+    "onCommand:vscodeRibbon.slot078",
+    "onCommand:vscodeRibbon.slot079",
+    "onCommand:vscodeRibbon.slot080",
+    "onCommand:vscodeRibbon.slot081",
+    "onCommand:vscodeRibbon.slot082",
+    "onCommand:vscodeRibbon.slot083",
+    "onCommand:vscodeRibbon.slot084",
+    "onCommand:vscodeRibbon.slot085",
+    "onCommand:vscodeRibbon.slot086",
+    "onCommand:vscodeRibbon.slot087",
+    "onCommand:vscodeRibbon.slot088",
+    "onCommand:vscodeRibbon.slot089",
+    "onCommand:vscodeRibbon.slot090",
+    "onCommand:vscodeRibbon.slot091",
+    "onCommand:vscodeRibbon.slot092",
+    "onCommand:vscodeRibbon.slot093",
+    "onCommand:vscodeRibbon.slot094",
+    "onCommand:vscodeRibbon.slot095",
+    "onCommand:vscodeRibbon.slot096",
+    "onCommand:vscodeRibbon.slot097",
+    "onCommand:vscodeRibbon.slot098",
+    "onCommand:vscodeRibbon.slot099",
+    "onCommand:vscodeRibbon.slot100",
+    "onCommand:vscodeRibbon.slot101",
+    "onCommand:vscodeRibbon.slot102",
+    "onCommand:vscodeRibbon.slot103",
+    "onCommand:vscodeRibbon.slot104",
+    "onCommand:vscodeRibbon.slot105",
+    "onCommand:vscodeRibbon.slot106",
+    "onCommand:vscodeRibbon.slot107",
+    "onCommand:vscodeRibbon.slot108",
+    "onCommand:vscodeRibbon.slot109",
+    "onCommand:vscodeRibbon.slot110",
+    "onCommand:vscodeRibbon.slot111",
+    "onCommand:vscodeRibbon.slot112",
+    "onCommand:vscodeRibbon.slot113",
+    "onCommand:vscodeRibbon.slot114",
+    "onCommand:vscodeRibbon.slot115",
+    "onCommand:vscodeRibbon.slot116",
+    "onCommand:vscodeRibbon.slot117",
+    "onCommand:vscodeRibbon.slot118",
+    "onCommand:vscodeRibbon.slot119",
+    "onCommand:vscodeRibbon.slot120",
+    "onCommand:vscodeRibbon.slot121",
+    "onCommand:vscodeRibbon.slot122",
+    "onCommand:vscodeRibbon.slot123",
+    "onCommand:vscodeRibbon.slot124",
+    "onCommand:vscodeRibbon.slot125",
+    "onCommand:vscodeRibbon.slot126",
+    "onCommand:vscodeRibbon.slot127",
+    "onCommand:vscodeRibbon.slot128",
+    "onView:vscodeRibbon.controlView",
+    "onCommand:vscodeRibbon.toggleEnabled"
+  ],
+  "main": "./dist/extension.js",
+  "scripts": {
+    "compile": "tsc -p .",
+    "watch": "tsc -watch -p .",
+    "pretest": "npm run compile",
+    "test": "mocha \"dist/test/suite/**/*.test.js\" --timeout 10000"
+  },
+  "contributes": {
+    "viewsContainers": {
+      "panel": [
+        {
+          "id": "vscodeRibbon",
+          "title": "Ribbon",
+          "icon": "media/ribbon.svg"
+        }
+      ],
+      "activitybar": [
+        {
+          "id": "vscodeRibbonControl",
+          "title": "Ribbon",
+          "icon": "media/ribbon.svg"
+        }
+      ]
+    },
+    "views": {
+      "vscodeRibbon": [
+        {
+          "id": "vscodeRibbon.view",
+          "name": "Ribbon",
+          "type": "webview"
+        }
+      ],
+      "vscodeRibbonControl": [
+        {
+          "id": "vscodeRibbon.controlView",
+          "name": "Ribbon Control"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "vscodeRibbon.focus",
+        "title": "Focus Ribbon",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.toggleEnabled",
+        "title": "Toggle Ribbon Enabled",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.toggleCustomizeMode",
+        "title": "Toggle Customize Mode",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.assignSlotFromPalette",
+        "title": "Assign Slot from Command Palette",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.assignSlotManual",
+        "title": "Assign Slot Manually",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.clearSlot",
+        "title": "Clear Slot",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.exportLayout",
+        "title": "Export Ribbon Layout",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.importLayout",
+        "title": "Import Ribbon Layout",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.setWriteTargetUser",
+        "title": "Set Write Target: User",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.setWriteTargetWorkspace",
+        "title": "Set Write Target: Workspace",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.copyKeybindingSnippet",
+        "title": "Copy Slot Keybinding Snippet",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot001",
+        "title": "Slot 001 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot002",
+        "title": "Slot 002 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot003",
+        "title": "Slot 003 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot004",
+        "title": "Slot 004 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot005",
+        "title": "Slot 005 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot006",
+        "title": "Slot 006 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot007",
+        "title": "Slot 007 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot008",
+        "title": "Slot 008 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot009",
+        "title": "Slot 009 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot010",
+        "title": "Slot 010 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot011",
+        "title": "Slot 011 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot012",
+        "title": "Slot 012 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot013",
+        "title": "Slot 013 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot014",
+        "title": "Slot 014 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot015",
+        "title": "Slot 015 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot016",
+        "title": "Slot 016 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot017",
+        "title": "Slot 017 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot018",
+        "title": "Slot 018 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot019",
+        "title": "Slot 019 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot020",
+        "title": "Slot 020 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot021",
+        "title": "Slot 021 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot022",
+        "title": "Slot 022 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot023",
+        "title": "Slot 023 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot024",
+        "title": "Slot 024 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot025",
+        "title": "Slot 025 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot026",
+        "title": "Slot 026 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot027",
+        "title": "Slot 027 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot028",
+        "title": "Slot 028 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot029",
+        "title": "Slot 029 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot030",
+        "title": "Slot 030 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot031",
+        "title": "Slot 031 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot032",
+        "title": "Slot 032 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot033",
+        "title": "Slot 033 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot034",
+        "title": "Slot 034 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot035",
+        "title": "Slot 035 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot036",
+        "title": "Slot 036 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot037",
+        "title": "Slot 037 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot038",
+        "title": "Slot 038 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot039",
+        "title": "Slot 039 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot040",
+        "title": "Slot 040 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot041",
+        "title": "Slot 041 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot042",
+        "title": "Slot 042 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot043",
+        "title": "Slot 043 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot044",
+        "title": "Slot 044 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot045",
+        "title": "Slot 045 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot046",
+        "title": "Slot 046 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot047",
+        "title": "Slot 047 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot048",
+        "title": "Slot 048 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot049",
+        "title": "Slot 049 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot050",
+        "title": "Slot 050 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot051",
+        "title": "Slot 051 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot052",
+        "title": "Slot 052 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot053",
+        "title": "Slot 053 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot054",
+        "title": "Slot 054 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot055",
+        "title": "Slot 055 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot056",
+        "title": "Slot 056 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot057",
+        "title": "Slot 057 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot058",
+        "title": "Slot 058 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot059",
+        "title": "Slot 059 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot060",
+        "title": "Slot 060 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot061",
+        "title": "Slot 061 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot062",
+        "title": "Slot 062 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot063",
+        "title": "Slot 063 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot064",
+        "title": "Slot 064 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot065",
+        "title": "Slot 065 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot066",
+        "title": "Slot 066 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot067",
+        "title": "Slot 067 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot068",
+        "title": "Slot 068 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot069",
+        "title": "Slot 069 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot070",
+        "title": "Slot 070 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot071",
+        "title": "Slot 071 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot072",
+        "title": "Slot 072 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot073",
+        "title": "Slot 073 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot074",
+        "title": "Slot 074 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot075",
+        "title": "Slot 075 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot076",
+        "title": "Slot 076 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot077",
+        "title": "Slot 077 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot078",
+        "title": "Slot 078 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot079",
+        "title": "Slot 079 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot080",
+        "title": "Slot 080 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot081",
+        "title": "Slot 081 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot082",
+        "title": "Slot 082 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot083",
+        "title": "Slot 083 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot084",
+        "title": "Slot 084 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot085",
+        "title": "Slot 085 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot086",
+        "title": "Slot 086 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot087",
+        "title": "Slot 087 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot088",
+        "title": "Slot 088 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot089",
+        "title": "Slot 089 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot090",
+        "title": "Slot 090 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot091",
+        "title": "Slot 091 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot092",
+        "title": "Slot 092 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot093",
+        "title": "Slot 093 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot094",
+        "title": "Slot 094 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot095",
+        "title": "Slot 095 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot096",
+        "title": "Slot 096 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot097",
+        "title": "Slot 097 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot098",
+        "title": "Slot 098 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot099",
+        "title": "Slot 099 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot100",
+        "title": "Slot 100 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot101",
+        "title": "Slot 101 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot102",
+        "title": "Slot 102 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot103",
+        "title": "Slot 103 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot104",
+        "title": "Slot 104 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot105",
+        "title": "Slot 105 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot106",
+        "title": "Slot 106 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot107",
+        "title": "Slot 107 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot108",
+        "title": "Slot 108 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot109",
+        "title": "Slot 109 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot110",
+        "title": "Slot 110 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot111",
+        "title": "Slot 111 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot112",
+        "title": "Slot 112 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot113",
+        "title": "Slot 113 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot114",
+        "title": "Slot 114 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot115",
+        "title": "Slot 115 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot116",
+        "title": "Slot 116 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot117",
+        "title": "Slot 117 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot118",
+        "title": "Slot 118 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot119",
+        "title": "Slot 119 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot120",
+        "title": "Slot 120 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot121",
+        "title": "Slot 121 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot122",
+        "title": "Slot 122 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot123",
+        "title": "Slot 123 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot124",
+        "title": "Slot 124 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot125",
+        "title": "Slot 125 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot126",
+        "title": "Slot 126 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot127",
+        "title": "Slot 127 (Internal)",
+        "category": "VS Code Ribbon"
+      },
+      {
+        "command": "vscodeRibbon.slot128",
+        "title": "Slot 128 (Internal)",
+        "category": "VS Code Ribbon"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "vscodeRibbon.focus",
+          "when": "true"
+        },
+        {
+          "command": "vscodeRibbon.toggleEnabled",
+          "when": "true"
+        },
+        {
+          "command": "vscodeRibbon.toggleCustomizeMode",
+          "when": "true"
+        },
+        {
+          "command": "vscodeRibbon.assignSlotFromPalette",
+          "when": "true"
+        },
+        {
+          "command": "vscodeRibbon.assignSlotManual",
+          "when": "true"
+        },
+        {
+          "command": "vscodeRibbon.clearSlot",
+          "when": "true"
+        },
+        {
+          "command": "vscodeRibbon.exportLayout",
+          "when": "true"
+        },
+        {
+          "command": "vscodeRibbon.importLayout",
+          "when": "true"
+        },
+        {
+          "command": "vscodeRibbon.setWriteTargetUser",
+          "when": "true"
+        },
+        {
+          "command": "vscodeRibbon.setWriteTargetWorkspace",
+          "when": "true"
+        },
+        {
+          "command": "vscodeRibbon.copyKeybindingSnippet",
+          "when": "true"
+        },
+        {
+          "command": "vscodeRibbon.slot001",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot002",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot003",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot004",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot005",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot006",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot007",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot008",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot009",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot010",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot011",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot012",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot013",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot014",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot015",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot016",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot017",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot018",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot019",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot020",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot021",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot022",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot023",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot024",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot025",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot026",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot027",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot028",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot029",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot030",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot031",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot032",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot033",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot034",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot035",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot036",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot037",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot038",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot039",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot040",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot041",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot042",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot043",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot044",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot045",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot046",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot047",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot048",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot049",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot050",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot051",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot052",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot053",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot054",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot055",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot056",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot057",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot058",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot059",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot060",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot061",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot062",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot063",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot064",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot065",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot066",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot067",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot068",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot069",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot070",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot071",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot072",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot073",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot074",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot075",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot076",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot077",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot078",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot079",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot080",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot081",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot082",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot083",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot084",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot085",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot086",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot087",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot088",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot089",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot090",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot091",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot092",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot093",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot094",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot095",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot096",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot097",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot098",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot099",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot100",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot101",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot102",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot103",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot104",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot105",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot106",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot107",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot108",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot109",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot110",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot111",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot112",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot113",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot114",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot115",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot116",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot117",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot118",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot119",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot120",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot121",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot122",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot123",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot124",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot125",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot126",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot127",
+          "when": "false"
+        },
+        {
+          "command": "vscodeRibbon.slot128",
+          "when": "false"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "vscodeRibbon.toggleEnabled",
+          "when": "view == vscodeRibbon.controlView",
+          "group": "navigation"
+        },
+        {
+          "command": "vscodeRibbon.focus",
+          "when": "view == vscodeRibbon.controlView",
+          "group": "navigation@2"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "VS Code Ribbon",
+      "properties": {
+        "vscodeRibbon.layout": {
+          "type": "object",
+          "default": {
+            "version": 1,
+            "tabs": []
+          },
+          "markdownDescription": "Ribbon layout definition (tabs, groups, items).",
+          "additionalProperties": true
+        },
+        "vscodeRibbon.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or disable ribbon UI actions and slot command execution."
+        },
+        "vscodeRibbon.writeTarget": {
+          "type": "string",
+          "enum": [
+            "user",
+            "workspace"
+          ],
+          "default": "workspace",
+          "description": "Where layout changes are persisted."
+        },
+        "vscodeRibbon.showLabels": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show item labels under icons."
+        },
+        "vscodeRibbon.iconSize": {
+          "type": "string",
+          "enum": [
+            "small",
+            "medium",
+            "large"
+          ],
+          "default": "medium",
+          "description": "Icon size in the ribbon."
+        },
+        "vscodeRibbon.compactMode": {
+          "type": "boolean",
+          "default": false,
+          "description": "Use compact spacing in the ribbon UI."
+        },
+        "vscodeRibbon.slotMinWidth": {
+          "type": "number",
+          "default": 112,
+          "minimum": 72,
+          "maximum": 400,
+          "description": "Minimum width in pixels for a ribbon slot card when variable-width layout is used."
+        },
+        "vscodeRibbon.slotMaxWidth": {
+          "type": "number",
+          "default": 280,
+          "minimum": 140,
+          "maximum": 640,
+          "description": "Maximum width in pixels for a ribbon slot card when variable-width layout is used."
+        },
+        "vscodeRibbon.slotShowOutline": {
+          "type": "boolean",
+          "default": false,
+          "description": "Show themed border/background outlines for ribbon slot cards."
+        },
+        "vscodeRibbon.autoAcceptCommandPaletteSelection": {
+          "type": "boolean",
+          "default": true,
+          "description": "When a ribbon item runs command-palette quickOpen queries, auto-accept the selected entry so Enter is not required."
+        },
+        "vscodeRibbon.capturePaletteWrapperCommands": {
+          "type": "boolean",
+          "default": false,
+          "description": "Capture quick input wrapper commands (quickOpen/showCommands) when assigning from Command Palette. Disable to prefer direct executable command IDs."
+        }
+      }
+    }
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^20.17.24",
+    "@types/vscode": "^1.95.0",
+    "mocha": "^11.1.0",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@vscode/codicons": "^0.0.44"
+  }
+}

@@ -1,0 +1,449 @@
+:root {
+  --ribbon-accent: var(--vscode-focusBorder, #3794ff);
+  --ribbon-accent-soft: color-mix(in srgb, var(--ribbon-accent) 26%, transparent 74%);
+  --ribbon-error: var(--vscode-errorForeground, #f48771);
+  --ribbon-foreground: color-mix(in srgb, var(--vscode-editor-foreground, #d4d4d4) 45%, #f2f5fb 55%);
+  --ribbon-muted: color-mix(in srgb, var(--vscode-descriptionForeground, #a0a0a0) 40%, #afbed1 60%);
+
+  /* Dark-first surfaces that still inherit VS Code theme identity. */
+  --ribbon-surface-a: color-mix(in srgb, var(--vscode-editor-background, #1e1e1e) 28%, #0a0f16 72%);
+  --ribbon-surface-b: color-mix(in srgb, var(--vscode-sideBar-background, #252526) 34%, #111a24 66%);
+  --ribbon-border: color-mix(in srgb, var(--vscode-panel-border, #3c3c3c) 46%, #344457 54%);
+  --ribbon-button-bg: color-mix(in srgb, var(--vscode-button-background, #0e639c) 44%, #223247 56%);
+  --ribbon-button-fg: color-mix(in srgb, var(--vscode-button-foreground, #ffffff) 75%, #f4f8ff 25%);
+  --ribbon-tab-bg: color-mix(in srgb, var(--vscode-editorWidget-background, #252526) 30%, #1a2838 70%);
+  --ribbon-group-bg: color-mix(in srgb, var(--vscode-editor-background, #1e1e1e) 30%, #142131 70%);
+  --ribbon-card-bg: color-mix(in srgb, var(--vscode-editorWidget-background, #252526) 28%, #1a2a3f 72%);
+  --ribbon-icon-bg: color-mix(in srgb, var(--vscode-textLink-foreground, #3794ff) 28%, #20324a 72%);
+  --ribbon-slot-max-width: 280px;
+  --ribbon-slot-min-width: 112px;
+}
+
+body.vscode-light,
+body.vscode-high-contrast-light {
+  --ribbon-foreground: #e5edf7;
+  --ribbon-muted: #adc0d8;
+  --ribbon-surface-a: color-mix(in srgb, var(--vscode-editor-background, #ffffff) 10%, #0a1017 90%);
+  --ribbon-surface-b: color-mix(in srgb, var(--vscode-sideBar-background, #f3f3f3) 12%, #111c28 88%);
+  --ribbon-border: color-mix(in srgb, var(--vscode-panel-border, #d4d4d4) 28%, #3d4f67 72%);
+  --ribbon-button-bg: color-mix(in srgb, var(--vscode-button-background, #007acc) 34%, #2a3c54 66%);
+  --ribbon-button-fg: #f4f8ff;
+  --ribbon-tab-bg: color-mix(in srgb, var(--vscode-editorWidget-background, #ffffff) 12%, #1a293a 88%);
+  --ribbon-group-bg: color-mix(in srgb, var(--vscode-editor-background, #ffffff) 10%, #142234 90%);
+  --ribbon-card-bg: color-mix(in srgb, var(--vscode-editorWidget-background, #ffffff) 12%, #1a2a3f 88%);
+  --ribbon-icon-bg: color-mix(in srgb, var(--vscode-textLink-foreground, #006ab1) 30%, #243b5a 70%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--ribbon-foreground);
+  background: radial-gradient(
+    circle at 8% 10%,
+    var(--ribbon-surface-a),
+    var(--ribbon-surface-b) 48%,
+    color-mix(in srgb, var(--ribbon-surface-b) 78%, #090d13 22%) 100%
+  );
+  font-family: var(--vscode-font-family);
+  min-height: 100vh;
+  color-scheme: dark;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  gap: 12px;
+  padding: 10px 12px 14px;
+  align-items: stretch;
+}
+
+#ribbon-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+#app[data-compact="true"] {
+  gap: 8px;
+}
+
+#app[data-panel-position="top"] {
+  flex-direction: column;
+}
+
+#app[data-panel-position="top"] #ribbon-toolbar {
+  order: 1;
+}
+
+#app[data-panel-position="top"] #ribbon-content {
+  order: 2;
+}
+
+#app[data-panel-position="bottom"] {
+  flex-direction: column;
+}
+
+#app[data-panel-position="bottom"] #ribbon-content {
+  order: 1;
+}
+
+#app[data-panel-position="bottom"] #ribbon-toolbar {
+  order: 2;
+}
+
+#app[data-panel-position="left"],
+#app[data-panel-position="right"] {
+  flex-direction: row;
+}
+
+#app[data-panel-position="left"] #ribbon-toolbar,
+#app[data-panel-position="right"] #ribbon-toolbar {
+  width: 220px;
+  min-width: 152px;
+  max-width: 40%;
+}
+
+#app[data-panel-position="left"] #ribbon-toolbar {
+  order: 1;
+}
+
+#app[data-panel-position="left"] #ribbon-content {
+  order: 2;
+}
+
+#app[data-panel-position="right"] #ribbon-content {
+  order: 1;
+}
+
+#app[data-panel-position="right"] #ribbon-toolbar {
+  order: 2;
+}
+
+.toolbar-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+#app[data-panel-position="left"] .toolbar-row,
+#app[data-panel-position="right"] .toolbar-row {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
+
+.toolbar-status {
+  font-size: 11px;
+  color: var(--ribbon-muted);
+  align-self: center;
+}
+
+#app[data-panel-position="left"] .toolbar-status,
+#app[data-panel-position="right"] .toolbar-status {
+  align-self: flex-start;
+}
+
+button {
+  border: 1px solid var(--ribbon-border);
+  border-radius: 8px;
+  color: var(--ribbon-button-fg);
+  background: var(--ribbon-button-bg);
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: transform 90ms ease, background 120ms ease, border-color 120ms ease;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--ribbon-accent) 58%, var(--ribbon-border) 42%);
+  background: color-mix(in srgb, var(--ribbon-button-bg) 74%, var(--ribbon-accent) 26%);
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+button.is-on {
+  background: color-mix(in srgb, var(--ribbon-accent) 60%, var(--ribbon-button-bg) 40%);
+}
+
+.tab-strip {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px 2px;
+}
+
+#app[data-panel-position="left"] .tab-strip,
+#app[data-panel-position="right"] .tab-strip {
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+.tab-btn {
+  white-space: nowrap;
+  background: var(--ribbon-tab-bg);
+}
+
+#app[data-panel-position="left"] .tab-btn,
+#app[data-panel-position="right"] .tab-btn {
+  width: 100%;
+  text-align: left;
+}
+
+.tab-btn.active {
+  border-color: var(--ribbon-accent);
+  box-shadow: 0 0 0 1px var(--ribbon-accent-soft) inset;
+}
+
+#ribbon-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 12px;
+  align-items: start;
+  min-width: 0;
+}
+
+.group {
+  border: 1px solid var(--ribbon-border);
+  border-radius: 12px;
+  background: var(--ribbon-group-bg);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.group-header {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.group-header h2 {
+  margin: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.85;
+}
+
+.group-controls {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.group-items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.item-card {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 auto;
+  width: max-content;
+  min-width: var(--ribbon-slot-min-width);
+  max-width: min(var(--ribbon-slot-max-width), 100%);
+}
+
+#app[data-slot-outline="true"] .item-card {
+  border-color: color-mix(in srgb, var(--ribbon-border) 84%, var(--ribbon-accent) 16%);
+  background: var(--ribbon-card-bg);
+}
+
+.item-card.is-missing {
+  border-color: color-mix(in srgb, var(--ribbon-error) 56%, var(--ribbon-border) 44%);
+}
+
+.item-execute {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  min-width: var(--ribbon-slot-min-width);
+  max-width: 100%;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: var(--ribbon-foreground);
+  align-items: center;
+  gap: 5px;
+  padding: 10px 8px;
+}
+
+#app[data-icon-size="small"] .item-execute {
+  padding: 8px 6px;
+}
+
+#app[data-icon-size="large"] .item-execute {
+  padding: 12px 10px;
+}
+
+.item-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ribbon-icon-bg);
+}
+
+#app[data-icon-size="small"] .item-icon {
+  width: 28px;
+  height: 28px;
+}
+
+#app[data-icon-size="large"] .item-icon {
+  width: 46px;
+  height: 46px;
+}
+
+.item-icon-fallback {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.item-icon .codicon {
+  font-size: 18px;
+}
+
+#app[data-icon-size="small"] .item-icon .codicon {
+  font-size: 14px;
+}
+
+#app[data-icon-size="large"] .item-icon .codicon {
+  font-size: 24px;
+}
+
+.item-icon-image {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.item-icon-image-mono {
+  filter: brightness(0) invert(1);
+}
+
+.item-label {
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.2;
+  max-width: 100%;
+  word-break: break-word;
+}
+
+.item-shortcut {
+  font-size: 11px;
+  color: var(--ribbon-muted);
+}
+
+.item-slot {
+  font-size: 10px;
+  color: var(--ribbon-muted);
+}
+
+.item-missing {
+  color: var(--ribbon-error);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.item-disabled {
+  color: var(--ribbon-muted);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.item-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 8px;
+  border-top: 1px solid transparent;
+}
+
+#app[data-slot-outline="true"] .item-controls {
+  border-top-color: var(--ribbon-border);
+}
+
+.item-controls button,
+.group-controls button {
+  padding: 4px 7px;
+  border-radius: 6px;
+  font-size: 11px;
+}
+
+.empty {
+  border: 1px dashed var(--ribbon-border);
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+  opacity: 0.8;
+  font-size: 12px;
+}
+
+@media (max-width: 760px) {
+  #app {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  #app[data-panel-position="left"],
+  #app[data-panel-position="right"] {
+    flex-direction: column;
+  }
+
+  #app[data-panel-position="left"] #ribbon-toolbar,
+  #app[data-panel-position="right"] #ribbon-toolbar {
+    width: auto;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  #app[data-panel-position="left"] .tab-strip,
+  #app[data-panel-position="right"] .tab-strip {
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  #app[data-panel-position="left"] .tab-btn,
+  #app[data-panel-position="right"] .tab-btn {
+    width: auto;
+    text-align: center;
+  }
+
+  #ribbon-content {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .group-items {
+    gap: 8px;
+  }
+
+  .item-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
